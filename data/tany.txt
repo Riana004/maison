@@ -1,0 +1,6 @@
+surface,ville,typePapier,acces,cloture,presABatir,prixM2
+2277,Ambatolampy,titre et borne,voiture,oui,oui,175000
+1867,Ivato,titre et borne,voiture,oui,oui,650000
+839,Ambatobe,titre et borne,voiture,oui,oui,
+1235,Ambatobe,titre et borne,voiture,oui,oui,
+2200,,Ivato,titre et borne,voiture,oui,oui,750000

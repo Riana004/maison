@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {% load i18n %}
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Estimation Immobilière" %}</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}?v=2">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?v=2">
+</head>
+
+<body>
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+        <div class="alert 
+        {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="home-container">
+        <h1 class="home-title">{% trans "Estimation Immobilière" %}</h1>
+        <p class="home-subtitle">{% trans "Obtenez une estimation précise pour vos biens immobiliers à Madagascar" %}
+        </p>
+
+        <div class="home-actions">
+            <a href="{% url 'location' %}" class="home-action-card">
+                <span class="home-action-icon">🏠</span>
+                <h3 class="home-action-title">{% trans "Louer une maison" %}</h3>
+                <p class="home-action-description">{% trans "Estimez le coût de location d'une propriété" %}</p>
+            </a>
+
+            <a href="{% url 'achat' %}" class="home-action-card">
+                <span class="home-action-icon">🌍</span>
+                <h3 class="home-action-title">{% trans "Acheter un terrain" %}</h3>
+                <p class="home-action-description">{% trans "Estimez le prix d'achat d'un terrain" %}</p>
+            </a>
+        </div>
+        <br>
+        <div class="home-actions">
+            <a href="{% url 'train_maison' %}" class="home-action-card">
+                <h3 class="home-action-title">{% trans "Entrainer le modèle de maison" %}</h3>
+            </a>
+
+            <a href="{% url 'train_terrain' %}" class="home-action-card">
+                <h3 class="home-action-title">{% trans "Entrainer le modèle de terrain" %}</h3>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/confirmation.css' %}?v=2">
+{% endblock %}
+
+{% block content %}
+{% load i18n %}
+
+<div class="confirmation-container">
+    <div class="confirmation-card">
+        <div class="confirmation-header">
+            <div class="confirmation-icon">🌍</div>
+            <h1 class="confirmation-title">{% trans "Estimation Complétée" %}</h1>
+            <p class="confirmation-subtitle">{% trans "Voici le prix estimé pour votre terrain" %}</p>
+        </div>
+        
+        <div class="details-section">
+            <h3>{% trans "Détails de votre terrain :" %}</h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Ville" %}</div>
+                    <div class="detail-value">{{ terrain.ville }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Type d'accès" %}</div>
+                    <div class="detail-value">{{ terrain.accessibilite.nom }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Type de papier" %}</div>
+                    <div class="detail-value">{{ terrain.type_papier.nom }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Clôturé" %}</div>
+                    <div class="detail-value">
+                        {% if terrain.est_cloture %}
+                            <span style="color: #48bb78;">✓ {% trans "Oui" %}</span>
+                        {% else %}
+                            <span style="color: #f56565;">✗ {% trans "Non" %}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Prêt à construire" %}</div>
+                    <div class="detail-value">
+                        {% if terrain.est_pret_a_construire %}
+                            <span style="color: #48bb78;">✓ {% trans "Oui" %}</span>
+                        {% else %}
+                            <span style="color: #f56565;">✗ {% trans "Non" %}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="price-highlight">
+            <div class="price-label">{% trans "Prix total estimé" %}</div>
+            <div class="price-value">
+                {{ prix_estime|floatformat:0 }} <span class="price-currency">Ar</span>
+            </div>
+        </div>
+        
+        <div class="confirmation-actions">
+            <a href="{% url 'achat' %}" class="action-btn action-btn-primary">
+                🌍 {% trans "Nouvelle estimation" %}
+            </a>
+            <a href="{% url 'location' %}" class="action-btn action-btn-secondary">
+                🏠 {% trans "Estimer une location" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

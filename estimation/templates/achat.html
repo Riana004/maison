@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+{% load i18n %}
+
+<div class="container">
+    <h1>{% trans "Estimation pour l'achat" %}</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans "Estimer le budget" %}</button>
+    </form>
+</div>
+{% endblock %}

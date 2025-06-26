@@ -1,0 +1,13 @@
+typeAcces,quartier,ville,typeMaison,comodite,nombre,prix
+parking,Ambohimiandra,Antananarivo,T3,interieur,4,2000000
+parking,Ambatobe,Antananarivo,F6,interieur,11,4500000
+parking,Ankorondrano,Antananarivo,F4,interieur,6,15000000
+parking,Ilafy,Antananarivo,F4,interieur,8,3000000
+parking,Bypass,Antananarivo,F5,interieur,8,11250000
+parking,Ivato,Antananarivo,F5,interieur,13,8000000
+parking,Ankorondrano,Antananarivo,F7,interieur,16,24000000
+parking,Andakana,,F2,interieur,4,2000000
+parking,Soavina,Antananarivo,F5,interieur,12,7500000
+parking,Ambohipotsy,Antananarivo,F4,interieur,10,8500000
+parking,Farango,,F5,interieur,13,7000000
+parking,Soavina,Antananarivo,F6,interieur,16,9260000

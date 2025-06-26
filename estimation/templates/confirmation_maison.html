@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/confirmation.css' %}?v=2">
+{% endblock %}
+
+{% block content %}
+{% load i18n %}
+
+<div class="confirmation-container">
+    <div class="confirmation-card">
+        <div class="confirmation-header">
+            <div class="confirmation-icon">🏠</div>
+            <h1 class="confirmation-title">{% trans "Estimation Complétée" %}</h1>
+            <p class="confirmation-subtitle">{% trans "Voici le prix estimé de votre maison" %}</p>
+        </div>
+        
+        <div class="details-section">
+            <h3>{% trans "Détails de votre estimation :" %}</h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Type de location" %}</div>
+                    <div class="detail-value">{{ maison.type.logement }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Type" %}</div>
+                    <div class="detail-value">{{ maison.type.nom }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Accessibilité" %}</div>
+                    <div class="detail-value">{{ maison.accessibilite.nom }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Ville" %}</div>
+                    <div class="detail-value">{{ maison.ville }}</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">{% trans "Nombre de chambres" %}</div>
+                    <div class="detail-value">{{ maison.nb_chambres }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="price-highlight">
+            <div class="price-label">{% trans "Prix estimé" %}</div>
+            <div class="price-value">
+                {{ prix_estime|floatformat:0 }} <span class="price-currency">Ar</span>
+            </div>
+        </div>
+        
+        <div class="confirmation-actions">
+            <a href="{% url 'location' %}" class="action-btn action-btn-primary">
+                🏠 {% trans "Nouvelle estimation" %}
+            </a>
+            <a href="{% url 'achat' %}" class="action-btn action-btn-secondary">
+                🏡 {% trans "Estimer un achat" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

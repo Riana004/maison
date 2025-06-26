@@ -1,0 +1,166 @@
+/* Container centering */
+.confirmation-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e9f4fb 100%);
+}
+
+.confirmation-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+    padding: 36px 32px 28px 32px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.confirmation-header {
+    margin-bottom: 32px;
+}
+
+.confirmation-icon {
+    font-size: 3.2rem;
+    margin-bottom: 8px;
+}
+
+.confirmation-title {
+    font-size: 2.1rem;
+    color: #283747;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.confirmation-subtitle {
+    color: #566573;
+    font-size: 1.07rem;
+}
+
+/* Détails Estimation */
+.details-section {
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.details-section h3 {
+    font-size: 1.12rem;
+    color: #283747;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 28px;
+    margin-top: 4px;
+}
+
+.detail-item {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.detail-label {
+    font-size: 0.97rem;
+    color: #8395a7;
+    margin-bottom: 2px;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #283747;
+    font-size: 1.03rem;
+}
+
+/* Price highlight */
+.price-highlight {
+    background: linear-gradient(90deg, #f7ca18 75%, #ffeaa7 100%);
+    border-radius: 10px;
+    padding: 24px 0 18px 0;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 6px rgba(247,202,24,0.09);
+}
+
+.price-label {
+    font-size: 1.06rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-size: 2.1rem;
+    color: #222;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.price-currency {
+    font-size: 1.1rem;
+    color: #636e72;
+    font-weight: 500;
+}
+
+/* Actions */
+.confirmation-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.action-btn {
+    padding: 11px 26px;
+    border-radius: 7px;
+    font-size: 1.04rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    display: inline-block;
+}
+
+.action-btn-primary {
+    background: #283747;
+    color: #fff;
+}
+
+.action-btn-primary:hover {
+    background: #f7ca18;
+    color: #222;
+}
+
+.action-btn-secondary {
+    background: #d5dbdb;
+    color: #283747;
+}
+
+.action-btn-secondary:hover {
+    background: #566573;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .confirmation-card {
+        padding: 22px 6vw 18px 6vw;
+        max-width: 98vw;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+    }
+    .confirmation-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .price-highlight {
+        padding: 16px 0 13px 0;
+    }
+}

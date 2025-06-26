@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-19 16:26+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\forms.py:13
+msgid "Ville sélectionnée"
+msgstr "Tanana nosafidiana"
+
+#: .\forms.py:17 .\forms.py:56 .\forms.py:111
+msgid "Cliquez sur la carte pour sélectionner..."
+msgstr "Kitio ny karatra hisafidianana"
+
+#: .\forms.py:28 .\forms.py:95 .\templates\confirmation_terrain.html:28
+msgid "Type d'accès"
+msgstr "Ny karazam-pidirana :"
+
+#: .\forms.py:33
+msgid "Type de logement"
+msgstr "Karazana fanofana"
+
+#: .\forms.py:38
+msgid "Commodités"
+msgstr "Fanampiny"
+
+#: .\forms.py:42 .\templates\confirmation_maison.html:43
+msgid "Nombre de chambres"
+msgstr "Isan'ny toeram-patoriana"
+
+#: .\forms.py:100 .\templates\confirmation_terrain.html:33
+msgid "Type de papier"
+msgstr "Karazana taratasy :"
+
+#: .\forms.py:117
+msgid "Terrain clôturé"
+msgstr "Tany mihidy ve?"
+
+#: .\forms.py:118 .\templates\confirmation_terrain.html:49
+msgid "Prêt à construire"
+msgstr "Afaka hanamboarana ve?"
+
+#: .\models.py:59 .\models.py:89 .\templates\confirmation_maison.html:38
+#: .\templates\confirmation_terrain.html:23
+msgid "Ville"
+msgstr "Tanana: "
+
+#: .\templates\achat.html:11
+msgid "Estimation pour l'achat"
+msgstr "Vinavina amin'ny fividianana"
+
+#: .\templates\achat.html:16 .\templates\location.html:16
+msgid "Estimer le budget"
+msgstr "Vinavinam-bidiny"
+
+#: .\templates\base.html:8 .\templates\index.html:8 .\templates\index.html:22
+msgid "Estimation Immobilière"
+msgstr "Vinanina momba ny trano"
+
+#: .\templates\base.html:21
+msgid "Estimation Location"
+msgstr "Vinavinam-panofana"
+
+#: .\templates\base.html:22
+msgid "Estimation Achat"
+msgstr "Vinavinam-pividy"
+
+#: .\templates\confirmation_maison.html:15
+#: .\templates\confirmation_terrain.html:15
+msgid "Estimation Complétée"
+msgstr "Vinanina momba ny trano"
+
+#: .\templates\confirmation_maison.html:16
+msgid "Voici le prix estimé de votre maison"
+msgstr "Inty ny vidiny heritreretanay ny tranonao"
+
+#: .\templates\confirmation_maison.html:20
+msgid "Détails de votre estimation :"
+msgstr "Ireto ny mombamomba ny vinavinanao"
+
+#: .\templates\confirmation_maison.html:23
+msgid "Type de location"
+msgstr "Karazana fanofana: "
+
+#: .\templates\confirmation_maison.html:28
+msgid "Type"
+msgstr "Karazany: "
+
+#: .\templates\confirmation_maison.html:33
+msgid "Accessibilité"
+msgstr "Fidirana"
+
+#: .\templates\confirmation_maison.html:50
+msgid "Prix estimé"
+msgstr "Vinavinam-pividy"
+
+#: .\templates\confirmation_maison.html:58
+#: .\templates\confirmation_terrain.html:70
+msgid "Nouvelle estimation"
+msgstr "Vinavina vaovao"
+
+#: .\templates\confirmation_maison.html:61
+msgid "Estimer un achat"
+msgstr "Vinavinam-pividy"
+
+#: .\templates\confirmation_terrain.html:16
+msgid "Voici le prix estimé pour votre terrain"
+msgstr "Inty ny vinavinam-bidy an'ny taninao"
+
+#: .\templates\confirmation_terrain.html:20
+msgid "Détails de votre terrain :"
+msgstr "Ireto ny mombamomban'ny taninao"
+
+#: .\templates\confirmation_terrain.html:38
+msgid "Clôturé"
+msgstr "Mihidy ve?: "
+
+#: .\templates\confirmation_terrain.html:41
+#: .\templates\confirmation_terrain.html:52
+msgid "Oui"
+msgstr "Eny"
+
+#: .\templates\confirmation_terrain.html:43
+#: .\templates\confirmation_terrain.html:54
+msgid "Non"
+msgstr "Tsia"
+
+#: .\templates\confirmation_terrain.html:62
+msgid "Prix total estimé"
+msgstr "Vinavinam-bidy: "
+
+#: .\templates\confirmation_terrain.html:73
+msgid "Estimer une location"
+msgstr "Vinavinam-panofana"
+
+#: .\templates\index.html:23
+msgid "Obtenez une estimation précise pour vos biens immobiliers à Madagascar"
+msgstr "Mahazoa vinavina voafaritra tsara ho an'ny trano sy tany eto Madagasikara"
+
+#: .\templates\index.html:28
+msgid "Louer une maison"
+msgstr "Hanofa trano"
+
+#: .\templates\index.html:29
+msgid "Estimez le coût de location d'une propriété"
+msgstr "Vinavina ny fanofana trano"
+
+#: .\templates\index.html:34
+msgid "Acheter un terrain"
+msgstr "Hividy tany"
+
+#: .\templates\index.html:35
+msgid "Estimez le prix d'achat d'un terrain"
+msgstr "Vinavina ny vidin'ny tany"
+
+#: .\templates\location.html:11
+msgid "Estimation pour la location"
+msgstr "Vinavina amin'ny fanofana"
+
+#: .\templates\template.html:25
+msgid "Sélectionnez une ville à Madagascar"
+msgstr "Misafidiana tanana iray eto Madagasikara"
+
+#: .\templates\template.html:28
+msgid "Cliquez sur la carte pour sélectionner automatiquement une ville"
+msgstr "Kitio ny karatra hisafidianana"
+
+#: .\templates\template.html:39
+msgid "Valider"
+msgstr "Ekena"
+
+#~ msgid "Louer un terrain"
+#~ msgstr "Hanofa tany"
+
+#~ msgid "Ville:"
+#~ msgstr "Tanana: "
+
+#~ msgid "Nombre de chambres:"
+#~ msgstr "Isan'ny fatoriana"
+
+#~ msgid "Retour à l'accueil"
+#~ msgstr "Miverina any amin'ny fandraisana"
+
+#~ msgid "Type d'accès :"
+#~ msgstr "Ny karazam-pidirana :"
+
+#~ msgid "Type de papier :"
+#~ msgstr "Karazana taratasy :"
+
+#~ msgid "Prêt à construire:"
+#~ msgstr "Afaka hanamboarana ve?"
+
+#~ msgid "Accueil"
+#~ msgstr "Manahoana"

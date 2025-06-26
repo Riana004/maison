@@ -1,0 +1,17 @@
+typeAcces,quartier,ville,typeMaison,comodite,nombre,prix
+parking,Ivandry,Antananarivo,T4,interieur,6,3000000
+parking,Ivato,Antananarivo,T4,interieur,8,1500000
+parking,Andohalo,Antananarivo,T3,,interieur,7,3000000
+parking,Ambolokandrina,Antananarivo,T3,interieur,6,2500000
+parking,Ivandry,Antananarivo,T4,interieur,9,4950000
+parking,Ambaranjana,,T3,interieur,7,4000000
+parking,Ambatobe,Antananarivo,T3,interieur,6,2500000
+parking,Ambatobe,Antananarivo,T3,interieur,7,3500000
+parking,Faravohitra,Antananarivo,T3,interieur,7,6000000
+parking,Isoraka,Antananarivo,T4,interieur,8,3700000
+parking,Androhibe,Antananarivo,T3,interieur,6,6500000
+parking,Analamahitsy,Antananarivo,T4,interieur,9,7500000
+parking,Andohalo,Antananarivo,T2,interieur,4,2600000
+parking,Ivandry,Antananarivo,T2,interieur,3,4250000
+parking,Ivandry,Antananarivo,T5,interieur,6,6600000
+parking,Ivato,Antananarivo,T4,interieur,9,3000000

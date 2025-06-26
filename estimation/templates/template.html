@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<!-- Map CSS -->
+<link rel="stylesheet" href="{% static 'css/map.css' %}">
+{% endblock %}
+
+{% block content %}
+{% load i18n %}
+
+{% if messages %}
+    <div class="alert alert-danger">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <h3>{% trans "Sélectionnez une ville à Madagascar" %}</h3>
+        
+        <div class="map-instructions">
+            {% trans "Cliquez sur la carte pour sélectionner automatiquement une ville" %}
+        </div>
+        
+        {{ form.as_p }}
+        
+        <div id="map">
+            <div class="map-loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">{% trans "Valider" %}</button>
+    </form>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide loading spinner after map loads
+    const mapElement = document.getElementById('map');
+    const loadingElement = document.querySelector('.map-loading');
+    
+    // Initialize map
+    const map = L.map('map').setView([-18.7669, 46.8691], 6);
+    
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    
+    let marker;
+    
+    // Hide loading spinner once map is ready
+    map.whenReady(function() {
+        setTimeout(() => {
+            loadingElement.classList.add('hidden');
+        }, 500);
+    });
+    
+    // Handle map clicks
+    map.on('click', async function(e) {
+        const {lat, lng} = e.latlng;
+        
+        try {
+            const response = await fetch(
+                `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&countrycodes=mg`
+            );
+            const data = await response.json();
+
+            console.log("Données récupérées:", data);
+            
+            if(data.address) {
+                const villeNom = data.address.city || data.address.town;
+                document.getElementById('id_ville').value = villeNom;
+                
+                // Remove existing marker
+                if(marker) map.removeLayer(marker);
+                
+                // Add new marker with custom popup
+                marker = L.marker([lat, lng]).addTo(map)
+                    .bindPopup(`<b>${villeNom}</b><br>Coordonnées: ${lat.toFixed(4)}, ${lng.toFixed(4)}`)
+                    .openPopup();
+            }
+        } catch(error) {
+            console.error("Erreur lors de la récupération des données:", error);
+        }
+    });
+});
+</script>
+{% endblock %}
